@@ -10,11 +10,18 @@ namespace _230703_MergeTest
     {
         static void Main(string[] args)
         {
+            // {    2023. 07. 03. Add user input / Beta
+            string userInput = string.Empty;
+            Console.WriteLine("This program convert Cm to Inch");
+            Console.WriteLine("Input Cm value : ");
+            userInput = Console.ReadLine();
 
-            Console.WriteLine("Hello World!");
-            Ruler ruler = new Ruler(10);
+            int cmInput = 0;
+            int.TryParse(userInput, out cmInput);
+
+            Ruler ruler = new Ruler(cmInput);
+            // {    2023. 07. 03. Add user input / Beta
             ruler.Run();
-
         }
         public class Ruler
         {
